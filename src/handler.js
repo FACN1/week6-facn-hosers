@@ -18,7 +18,6 @@ const homeHandler = (req, res) => {
     }
   })
 }
-
 //Create handler for main.js and main.css
 const assetsHandler = (req, res) => {
   //Handler Variables
@@ -36,7 +35,6 @@ const assetsHandler = (req, res) => {
     }
   })
 }
-
 //Create 404 handler
 const errorHandler = (req, res) => {
   res.writeHead(404, {'content-type': 'text/plain'});

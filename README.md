@@ -64,9 +64,13 @@ Upon searching, reload same page, with a reduced table with rows where the strin
 
   *to connect to the remote db*
 
-## Database Schema
+## Database Files
 
-### shops
+- db_build.sql - DB script which creates a table with initial values.
+- db_connection.js - connects us to the DB with the correct parameters.
+- db_build.js - connects to the DB using db_connection and queries the DB with  our DB script.
+
+### Shops Table Schema
 ```SQL
 shop_id SERIAL PRIMARY KEY
 shop_name varchar(200) NOT NULL
