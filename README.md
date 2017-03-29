@@ -63,3 +63,16 @@ Upon searching, reload same page, with a reduced table with rows where the strin
   - db_connection.js
 
   *to connect to the remote db*
+
+## Database Schema
+
+### shops
+```SQL
+shop_id SERIAL PRIMARY KEY
+shop_name varchar(200) NOT NULL
+shop_rating INTEGER
+cost varchar(20)
+address varchar(500)
+description varchar(500)
+tags varchar(200)
+```
