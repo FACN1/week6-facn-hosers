@@ -1,0 +1,27 @@
+{
+  "name": "week6-facn-hosers",
+  "version": "1.0.0",
+  "description": "App to list food and coffee locations around Nazareth",
+  "main": "server.js",
+  "scripts": {
+    "test": "node src/tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN1/week6-facn-hosers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN1/week6-facn-hosers/issues"
+  },
+  "homepage": "https://github.com/FACN1/week6-facn-hosers#readme",
+  "devDependencies": {
+    "env2": "^2.1.1",
+    "nodemon": "^1.11.0",
+    "pg": "^6.1.5",
+    "shot": "^3.4.0",
+    "tape": "^4.6.3",
+    "url": "^0.11.0"
+  }
+}
