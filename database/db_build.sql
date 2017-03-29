@@ -9,7 +9,7 @@ CREATE TABLE shops (
   cost INTEGER CHECK (cost BETWEEN 1 AND 5),
   address VARCHAR(500),
   description VARCHAR(1000),
-  tags VARCHAR(200),
+  tags VARCHAR(200)
 );
 
 INSERT INTO shops (shop_name,shop_rating,cost,address,description,tags)
