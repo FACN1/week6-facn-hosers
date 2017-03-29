@@ -4,6 +4,7 @@
   "description": "App to list food and coffee locations around Nazareth",
   "main": "server.js",
   "scripts": {
+    "start": "node src/server.js",
     "test": "node src/tests/test.js"
   },
   "repository": {
