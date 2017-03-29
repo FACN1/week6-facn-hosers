@@ -54,6 +54,12 @@ Upon searching, reload same page, with a reduced table with rows where the strin
   - test
     - servertests.js
 - database
-  - db_build.js *in this file we connect to database and then run the build.sql file below*
-  - db_build.sql *sql script which we build our table with on the remote database*
-  - db_connection.js *to connect to the remote db*
+  - db_build.js
+
+  *in this file we connect to database and then run the build.sql file below*
+  - db_build.sql
+
+  *sql script which we build our table with on the remote database*
+  - db_connection.js
+
+  *to connect to the remote db*
