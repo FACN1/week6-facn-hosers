@@ -3,7 +3,7 @@ App to list food and coffee locations around Nazareth
 
 ## User Stories
 As a tourist in Nazareth looking for somewhere to eat or drink
-> I want to vist the site and see a list of places with locations, ratings, prices, and descriptions
+> I want to visit the site and see a list of places with locations, ratings, prices, and descriptions
 
 > I want to search for a particular food or drink item and see a list of shops where I can get that item
 
