@@ -12,8 +12,8 @@ tape('initialize', function(t){
 
  tape('Home Route', function(t){
   //Use shot inject to test home route
+  let testStrings = "<title>Nazareth FACN Foods</title>"
   shot.inject(router, {method: 'get', url:'/'}, function(res){
-    console.log(res.payload.indexOf(testStrings))
     t.equal(res.statusCode, 200, 'test that status code is 200');
     t.ok(res.payload.includes(testStrings), 'Title string inside index.html was found');
     t.end();
