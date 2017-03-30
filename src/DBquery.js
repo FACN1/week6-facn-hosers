@@ -1,6 +1,6 @@
 const dbConnection = require('../database/db_connection.js');
 
-function getData(cb, search){
+function getData(search, cb){
   if (!search){
     dbConnection.query('SELECT shop_name, shop_rating, cost, address, description, tags FROM shops;', (err, res) => {
       if (err) cb(err);

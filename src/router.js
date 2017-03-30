@@ -4,7 +4,9 @@ const routes = {
   '/': handler.homeHandler,
   '404': handler.errorHandler,
   '/main.css': handler.assetsHandler,
-  '/main.js': handler.assetsHandler
+  '/main.js': handler.assetsHandler,
+  '/render.js':handler.assetsHandler,
+  '/addAllData': handler.allDataHandler
 }
 
 const router = (req, res) => {

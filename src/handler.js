@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const DBquery = require('./DBquery');
 
 const extensionType = {
   'js': 'application/javascript',
@@ -35,6 +36,15 @@ const assetsHandler = (req, res) => {
     }
   })
 }
+
+const allDataHandler = (req, res) => {
+  DBquery.getData(null,(err, result) => {
+    if (err) throw err;
+    let table = JSON.stringify(result);
+    res.writeHead(200, {"content-type": 'application/json'});
+    res.end(table);
+  });
+}
 //Create 404 handler
 const errorHandler = (req, res) => {
   res.writeHead(404, {'content-type': 'text/plain'});
@@ -44,5 +54,6 @@ const errorHandler = (req, res) => {
 module.exports = {
   homeHandler: homeHandler,
   assetsHandler: assetsHandler,
-  errorHandler: errorHandler
+  errorHandler: errorHandler,
+  allDataHandler: allDataHandler
 }
