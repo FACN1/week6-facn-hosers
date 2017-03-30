@@ -20,3 +20,17 @@ var requestModule = (function(){
 })();
 
 requestModule.makeRequest('GET', '/addAllData' ,renderModule.updateDOM)
+
+var searchBTN = document.getElementById('searchButton');
+
+searchBTN.addEventListener('click', function(event) {
+  var value = document.getElementById('searchInput').value;
+  if(typeof value !== "string") {
+    document.getElementById('searchInput').value = "Input must be words";
+  }
+  else {
+    var url = '/search?'+ value.trim();
+    requestModule.makeRequest('GET', url ,renderModule.updateDOM)
+
+  }
+})
