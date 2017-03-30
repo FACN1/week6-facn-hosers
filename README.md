@@ -80,3 +80,21 @@ address varchar(500)
 description varchar(500)
 tags varchar(200)
 ```
+
+## To do list
+
+- [x] Build and host the database
+- [ ] Build the actual site
+ - [ ] Get site to display table upon page load
+    - [ ] build client side code:
+     - [ ] HTML page with empty table
+     - [ ] JS scripts: Request function to make requests to the server, render function to render the data from database to the server, script to call the function on page load.
+    - [ ] build server side code:
+     - [ ] Have an endpoint for requesting all the data, which queries the database and sends back the whole table (except for id)
+     - [ ] Have an endpoint for requesting some data in the search box and sending back just the results
+     - [ ] Have an endpoint which adds data to the table and refreshes the render.
+- [ ] Get testing:
+  - [ ] Write tests for endpoints that already existing
+  - [ ] Write the new endpoints tdd
+  - [ ] Write the render function tdd
+  - [ ] Write the request function tdd
