@@ -1,12 +1,33 @@
+const dbConnection = require('../database/db_connection.js');
+
 function getData(cb, query){
   if (!query){
-    //GET EVERYTHING
+    dbConnection.query('SELECT shop_name, shop_rating, cost, address, description, tags FROM shops', (err, res) => {
+      if (err) cb(err);
+      cb(null, res.rows);
+    });
   }
   else {
-    get query
+    dbConnection.query('SELECT shop-name, shop_rating, cost, address, description,tags FROM shops WHERE tags LIKE %query%', (err, res) => {
+      if (err) cb(err);
+      cb(null, res.rows);
+    });
+  };
+}
+
+function render(err, res){
+  if (err) {
+    console.log(err);
+    return;
+  }
+  else {
+    console.log(res);
   }
 }
 
-module.exports {
+getData(render);
+// getData(render, 'coffee');
+
+module.exports = {
   getData: getData
 }
