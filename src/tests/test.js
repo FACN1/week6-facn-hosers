@@ -30,18 +30,18 @@ tape('404 Route', function(t){
   })
 })
 
-tape ('Getting Data', function(t){
-  let cb = (err, res) => {
-    if (err) {
-      console.log(err);
-    }
-    else {
-      return res;
-    }
-  }
-
-  t.equal(dbq.getData(cb),
-})
+// tape ('Getting Data', function(t){
+//   let cb = (err, res) => {
+//     if (err) {
+//       console.log(err);
+//     }
+//     else {
+//       return res;
+//     }
+//   }
+//
+//   t.equal(dbq.getData(cb),
+// })
 //
 // tape('Error Route', function(t){
 //   shot.inject(router, {method: 'get', url:'/error'}, function(res){
