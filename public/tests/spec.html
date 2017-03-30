@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Nazareth FACN Foods</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <title>QUnit Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.0.css">
+  </head>
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <header>
+      <h1>Food and Drinks in Nazareth</h1>
+    </header>
+    <section>
+      <div class="search-container">
+        <form class="form">
+          <input type="text" name="query" value="" placeholder="Search by tags">
+          <button type="button" name="search" id="searchButton">SEARCH</button>
+        </form>
+      </div>
+      <div class="table-container">
+        <table id="shops-table">
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Rating</th>
+            <th>Cost</th>
+            <th>Address</th>
+            <th>Tags</th>
+          </tr>
+        </table>
+      </div>
+      <div class="add-container">
+        <form class="form">
+          <input type="text" name="add" value="" placeholder="Name">
+          <input type="text" name="add" value="" placeholder="Description">
+          <input type="text" name="add" value="" placeholder="Rating(out of 10)">
+          <input type="text" name="add" value="" placeholder="Cost(out of 5)">
+          <input type="text" name="add" value="" placeholder="Address">
+          <input type="text" name="add" value="" placeholder="Tags">
+          <button type="button" name="add" id="addButton">ADD</button>
+        </form>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/qunit/qunit-2.3.0.js"></script>
+    <script type='text/javascript' src="../render.js"></script>
+    <script type='text/javascript' src="../main.js"></script>
+    <script type='text/javascript' src="fixtures.js"></script>
+    <script type='text/javascript' src="test.js"></script>
+  </body>
+</html>
