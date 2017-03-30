@@ -3,8 +3,8 @@ const handler = require('./handler.js');
 const routes = {
   '/': handler.homeHandler,
   '404': handler.errorHandler,
-  'main.css': handler.assetsHandler,
-  'main.js': handler.assetsHandler
+  '/main.css': handler.assetsHandler,
+  '/main.js': handler.assetsHandler
 }
 
 const router = (req, res) => {
