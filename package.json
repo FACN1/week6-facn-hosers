@@ -17,13 +17,15 @@
     "url": "https://github.com/FACN1/week6-facn-hosers/issues"
   },
   "homepage": "https://github.com/FACN1/week6-facn-hosers#readme",
-  "devDependencies": {
+  "dependencies": {
     "env2": "^2.1.1",
+    "url": "^0.11.0",
+    "pg": "^6.1.5"
+  },
+  "devDependencies": {
     "nodemon": "^1.11.0",
-    "pg": "^6.1.5",
     "shot": "^3.4.0",
-    "tape": "^4.6.3",
-    "url": "^0.11.0"
+    "tape": "^4.6.3"
   },
   "engines": {
     "node": "7.4.0"
