@@ -19,7 +19,7 @@ var requestModule = (function(){
   }
 })();
 
-requestModule.makeRequest('GET', '/addAllData' ,renderModule.updateDOM)
+requestModule.makeRequest('GET', '/addAllData' ,  renderModule.updateDOM)
 var searchBTN = document.getElementById('searchButton');
 searchBTN.addEventListener('click', function(event) {
   var value = document.getElementById('searchInput').value;
