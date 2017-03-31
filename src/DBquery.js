@@ -1,4 +1,4 @@
-const dbConnection = require('../database/db_connection.js');
+const dbConnection = require('../database/db_connection.js')
 
 function getAllData(cb){
   dbConnection.query('SELECT shop_name, shop_rating, cost, address, description, tags FROM shops;', (err, res) => {
@@ -13,7 +13,7 @@ function getSearchData(search, cb){
     if (err) cb(err);
     cb(null, res.rows);
   });
-};
+}
 
 module.exports = {
   getAllData: getAllData,
