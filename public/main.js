@@ -20,15 +20,19 @@ var requestModule = (function(){
 })();
 
 requestModule.makeRequest('GET', '/addAllData' ,  renderModule.updateDOM)
-var searchBTN = document.getElementById('searchButton');
-searchBTN.addEventListener('click', function(event) {
-  var value = document.getElementById('searchInput').value;
+
+
+var searchForm = document.getElementById('searchForm');
+
+searchForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  var value = searchForm.searchValue.value;
   if(typeof value !== "string") {
-    document.getElementById('searchInput').value = "Input must be words";
+    searchForm.searchValue.value = "Input must be words";
   }
   else {
     var url = '/search?'+ value.trim();
     requestModule.makeRequest('GET', url ,renderModule.updateDOM)
-
+    searchForm.searchValue.value = "Search completed";
   }
 })
