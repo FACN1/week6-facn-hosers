@@ -8,7 +8,6 @@ function getData(search, cb){
     });
   }
   else {
-    // dbConnection.query(`SELECT shop_name, shop_rating, cost, address, description,tags FROM shops WHERE tags LIKE '%`+ search +`%';`, (err, res)
 
     dbConnection.query(`SELECT shop_name, shop_rating, cost, address, description,tags FROM shops WHERE tags LIKE '%${search}%';`,
      (err, res) => {
@@ -17,18 +16,6 @@ function getData(search, cb){
     });
   };
 }
-
-// function render(err, res){
-//   if (err) {
-//     console.log(err);
-//     return;
-//   }
-//   else {
-//     console.log(res);
-//   }
-// }
-// getData(render);
-// getData(render, 'coffee');
 
 module.exports = {
   getData: getData
