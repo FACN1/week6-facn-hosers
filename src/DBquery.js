@@ -10,7 +10,7 @@ function getData(search, cb){
   else {
     // dbConnection.query(`SELECT shop_name, shop_rating, cost, address, description,tags FROM shops WHERE tags LIKE '%`+ search +`%';`, (err, res)
 
-    dbConnection.query(`SELECT shop_name, shop_rating, cost, address, description,tags FROM shops WHERE tags LIKE '%${search}%';`,
+    dbConnection.query(`SELECT shop_name, shop_rating, cost, address, description,tags FROM shops WHERE tags ILIKE '%${search}%';`,
      (err, res) => {
       if (err) cb(err);
       cb(null, res.rows);
