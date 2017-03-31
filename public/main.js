@@ -33,6 +33,6 @@ searchForm.addEventListener('submit', function(event) {
   else {
     var url = '/search?'+ value.trim();
     requestModule.makeRequest('GET', url ,renderModule.updateDOM)
-    searchForm.searchValue.value = "Search completed";
+    searchForm.searchValue.value = null;
   }
 })
