@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const DBquery = require('./DBquery');
-const url = require('url');
 
 const extensionType = {
   'js': 'application/javascript',
@@ -39,7 +38,7 @@ const assetsHandler = (req, res) => {
 }
 
 const allDataHandler = (req, res) => {
-  DBquery.getData(null,(err, result) => {
+  DBquery.getAllData((err, result) => {
     if (err) throw err;
     let table = JSON.stringify(result);
     res.writeHead(200, {"content-type": 'application/json'});
@@ -50,7 +49,7 @@ const allDataHandler = (req, res) => {
 const searchHandler = (req, res) => {
   let searchUrl = req.url;
   let searchString = searchUrl.split('?')[1];
-  DBquery.getData(searchString,(err, result) => {
+  DBquery.getSearchData(searchString,(err, result) => {
     if (err) throw err;
     let table = JSON.stringify(result);
     res.writeHead(200, {"content-type": 'application/json'});
