@@ -1,6 +1,8 @@
 # week6-facn-hosers
 App to list food and coffee locations around Nazareth
 
+Check it out hosted on [heroku](https://facn-app.herokuapp.com/)
+
 ## User Stories
 As a tourist in Nazareth looking for somewhere to eat or drink
 > I want to visit the site and see a list of places with locations, ratings, prices, and descriptions
