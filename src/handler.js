@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const DBquery = require('./DBquery');
-const url = require('url');
 
 const extensionType = {
   'js': 'application/javascript',
