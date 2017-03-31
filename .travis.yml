@@ -1,4 +1,5 @@
-{
-"language": "node_js",
-"node_js": "7"
-}
+language: node_js
+node_js:
+  - v7
+env:
+  - DATABASE_URL=postgres://nnkiyvkcbokmku:8b92703e914c46e71f813f7860929b59a1295b6cdbcbd2d11254639458001cf5@ec2-54-163-254-48.compute-1.amazonaws.com:5432/dcgb769t078bhr
