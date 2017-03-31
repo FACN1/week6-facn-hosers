@@ -7,6 +7,9 @@ var renderModule = (function() {
     else {
       var shops = JSON.parse(data);
       var table = document.getElementById('shops-table');
+      while (table.childNodes.length > 2) {
+        table.removeChild(table.lastChild)
+      }
       shops.forEach(function(shop) {
         var row = document.createElement('tr');
         var name = document.createElement('td');
