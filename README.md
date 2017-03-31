@@ -86,17 +86,17 @@ tags varchar(200)
 ## To do list
 
 - [x] Build and host the database
-- [ ] Build the actual site
- - [ ] Get site to display table upon page load
-    - [ ] build client side code:
+- [x] Build the actual site
+ - [x] Get site to display table upon page load
+    - [x] build client side code:
      - [x] HTML page with empty table
-     - [ ] JS scripts: Request function to make requests to the server, render function to render the data from database to the server, script to call the function on page load.
-    - [ ] build server side code:
-     - [ ] Have an endpoint for requesting all the data, which queries the database and sends back the whole table (except for id)
-     - [ ] Have an endpoint for requesting some data in the search box and sending back just the results
-     - [ ] Have an endpoint which adds data to the table and refreshes the render.
+     - [x] JS scripts: Request function to make requests to the server, render function to render the data from database to the server, script to call the function on page load.
+    - [x] build server side code:
+     - [x] Have an endpoint for requesting all the data, which queries the database and sends back the whole table (except for id)
+     - [x] Have an endpoint for requesting some data in the search box and sending back just the results
+     - [x] Have an endpoint which adds data to the table and refreshes the render.
 - [ ] Get testing:
-  - [ ] Write tests for endpoints that already existing
+  - [x] Write tests for endpoints that already existing
   - [ ] Write the new endpoints tdd
   - [x] Write the render function tdd
   - [ ] Write the request function tdd
