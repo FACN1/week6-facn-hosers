@@ -5,6 +5,7 @@ var renderModule = (function() {
       return error;
     }
     else {
+      // console.log(data);
       var shops = JSON.parse(data);
       var table = document.getElementById('shops-table');
       while (table.childNodes.length > 2) {

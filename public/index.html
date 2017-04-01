@@ -29,14 +29,14 @@
         </table>
       </div>
       <div class="add-container">
-        <form class="form">
-          <input type="text" name="add" value="" placeholder="Name">
-          <input type="text" name="add" value="" placeholder="Description">
-          <input type="text" name="add" value="" placeholder="Rating(out of 10)">
-          <input type="text" name="add" value="" placeholder="Cost(out of 5)">
-          <input type="text" name="add" value="" placeholder="Address">
-          <input type="text" name="add" value="" placeholder="Tags">
-          <button type="button" name="add" id="addButton">ADD</button>
+        <form class="form" id = "addForm">
+          <input type="text" name="name" value="" placeholder="Name" required>
+          <input type="text" name="desc" value="" placeholder="Description" required>
+          <input type="number" min = 0 max = "10" name="rate" value="" placeholder="Rating(out of 10)" required>
+          <input type="number" min = 0 max = "5" name="cost" value="" placeholder="Cost(out of 5)" required>
+          <input type="text" name="loc" value="" placeholder="Address" required>
+          <input type="text" name="tags" value="" placeholder="Tags" required>
+          <button type="submit" name="addBtn">ADD</button>
         </form>
       </div>
     </section>

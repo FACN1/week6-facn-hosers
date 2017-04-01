@@ -7,7 +7,8 @@ const routes = {
   '/main.js': handler.assetsHandler,
   '/render.js': handler.assetsHandler,
   '/addAllData': handler.allDataHandler,
-  'search': handler.searchHandler
+  'search': handler.searchHandler,
+  '/addShop':handler.addHandler
 }
 
 const router = (req, res) => {

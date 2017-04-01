@@ -56,6 +56,24 @@ const searchHandler = (req, res) => {
     res.end(table);
   });
 }
+
+const addHandler = (req, res) => {
+  let addData = [];
+  req.on('data', (chunk) => {
+    // console.log(chunk.toString())
+    addData.push(chunk)
+  })
+  req.on('end', () => {
+    addData = Buffer.concat(addData).toString();
+    data = JSON.parse(addData);
+    DBquery.addData(data,(err, result) => {
+      if (err) return err;
+      res.writeHead(303,{"Location":'/'});
+      res.end();
+      return;
+    })
+  })
+}
 //Create 404 handler
 const errorHandler = (req, res) => {
   res.writeHead(404, {'content-type': 'text/plain'});
@@ -67,5 +85,6 @@ module.exports = {
   assetsHandler: assetsHandler,
   errorHandler: errorHandler,
   allDataHandler: allDataHandler,
-  searchHandler: searchHandler
+  searchHandler: searchHandler,
+  addHandler: addHandler
 }
