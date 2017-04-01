@@ -46,6 +46,7 @@ addForm.addEventListener('submit', function(event){
   var data = {};
   inputs.forEach(function(ip){
     data[ip] = addForm[ip].value
+    addForm[ip].value = null
   });
-  requestModule.makeRequest('POST', '/addShop', JSON.stringify(data),renderModule.updateDOM)
+  requestModule.makeRequest('POST', '/addShop', JSON.stringify(data), renderModule.updateDOM)
 })

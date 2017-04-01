@@ -66,11 +66,14 @@ const addHandler = (req, res) => {
   req.on('end', () => {
     addData = Buffer.concat(addData).toString();
     data = JSON.parse(addData);
-    DBquery.addData(data,(err, result) => {
+    DBquery.addData(data,(err) => {
       if (err) return err;
-      res.writeHead(303,{"Location":'/'});
-      res.end();
-      return;
+      DBquery.getAllData((err, result) => {
+        if (err) throw err;
+        let table = JSON.stringify(result);
+        res.writeHead(200, {"content-type": 'application/json'});
+        res.end(table);
+      });
     })
   })
 }

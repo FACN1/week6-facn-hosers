@@ -18,11 +18,7 @@ function getSearchData(search, cb){
 }
 
 function addData(toAdd, cb){
-  dbConnection.query('INSERT INTO shops(shop_name,shop_rating,cost, address,description,tags) VALUES ($1,$2,$3,$4,$5,$6)',[toAdd.name, toAdd.rate, toAdd.cost, toAdd.loc, toAdd.desc, toAdd.tags],
-   (err, res) => {
-    if (err) return cb(err);
-    cb(null, res.rows);
-  });
+  dbConnection.query('INSERT INTO shops(shop_name,shop_rating,cost, address,description,tags) VALUES ($1,$2,$3,$4,$5,$6)',[toAdd.name, toAdd.rate, toAdd.cost, toAdd.loc, toAdd.desc, toAdd.tags], cb);
 }
 
 module.exports = {
